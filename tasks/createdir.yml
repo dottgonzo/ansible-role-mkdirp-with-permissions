@@ -1,5 +1,5 @@
 ---
-- name: Creates directory
+- name: Creates directory "{{ directory_path }}"
   file:
     path: "{{ directory_path }}"
     state: directory
