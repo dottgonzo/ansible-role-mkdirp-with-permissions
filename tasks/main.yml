@@ -12,8 +12,8 @@
     loop_var: directory_item
   vars:
     directory_path: "{{ directory_item.directory_path }}"
-    directory_user_owner: "{{ directory_item.directory_user_owner if directory_item.directory_user_owner else undefined }}"
-    directory_group_owner: "{{ directory_item.directory_group_owner if directory_item.directory_group_owner else undefined }}"
-    directory_mode: "{{ directory_item.directory_mode if directory_item.directory_mode else undefined }}"
+    directory_user_owner: "{{ directory_item.directory_user_owner if directory_item.directory_user_owner is defined else undefined }}"
+    directory_group_owner: "{{ directory_item.directory_group_owner if directory_item.directory_group_owner is defined else undefined }}"
+    directory_mode: "{{ directory_item.directory_mode if directory_item.directory_mode is defined else undefined }}"
   when:
     - create_directories is defined
