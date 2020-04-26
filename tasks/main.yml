@@ -6,8 +6,8 @@
     - create_directories is undefined
 
 - name: Add Multiple Directories
-  include_tasks: addkey.yml
-  loop: "{{ sshkeys if sshkeys is defined else [] }}"
+  include_tasks: createdir.yml
+  loop: "{{ create_directories if create_directories is defined else [] }}"
   loop_control:
     loop_var: directory_item
   vars:
