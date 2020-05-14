@@ -6,4 +6,3 @@
     owner: "{{ directory_user_owner if directory_owner is defined else 'root' }}"
     group: "{{ directory_group_owner if directory_owner is defined else 'root' }}"
     mode: "{{ directory_mode if directory_mode is defined else '0755' }}"
-    recurse: yes
